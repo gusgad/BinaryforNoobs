@@ -1,9 +1,9 @@
 module.exports = function(grunt) {
- 
+
   grunt.initConfig({
  // postcss
     postcss: {
- 
+
       options: {
         processors: [
           require('autoprefixer')(),
@@ -15,9 +15,9 @@ module.exports = function(grunt) {
          src: 'style.css',
          dest: 'main.css'
       }
- 
+
     },
-      
+
 //imagemin
       imagemin: {
          dynamic: {
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
             }]
          }
       },
-      
+
 //uncss
       uncss: {
           dist: {
@@ -44,8 +44,8 @@ module.exports = function(grunt) {
             }
           }
       },
-  
-    
+
+
 //sass
       sass: {
 		dist: {
@@ -54,19 +54,38 @@ module.exports = function(grunt) {
 			}
 		}
 	},
-      
+
+  babel: {
+            "options": {
+                "sourceMap": true,
+                "experimental": true
+            },
+            dist: {
+                files: [{
+                    "expand": true,
+                    "cwd": "assets/app/modules",
+                    "src": ["**/*.js"],
+                    "dest": "assets/app/",
+                    "ext": ".js"
+                }]
+            }
+      },
 //watch
       watch: {
 			sass: {
 				files: 'assets/css/*.sass',
 				tasks: ['sass']
 			},
-            jade: {
-                files: 'assets/*.jade',
-                tasks: ['jade']
-            }
+      jade: {
+        files: 'assets/app/templates/*.jade',
+        tasks: ['jade']
+      },
+      scripts: {
+        files: 'assets/app/modules/*.js',
+        tasks: ["babel"]
+      }
 		},
-      
+
 //jade
        jade: {
           compile: {
@@ -80,7 +99,7 @@ module.exports = function(grunt) {
             }
           }
        },
-      
+
 //server
       connect: {
         server: {
@@ -92,7 +111,7 @@ module.exports = function(grunt) {
             }
         }
       },
-      
+
 //css min
       cssmin: {
           options: {
@@ -106,10 +125,10 @@ module.exports = function(grunt) {
           }
       }
 });
-    
-    
-    
-    
+
+
+
+
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -118,6 +137,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
- 
+  grunt.registerTask('grunt-contrib-babel');
+
   grunt.registerTask('default', ['watch']);
 };
