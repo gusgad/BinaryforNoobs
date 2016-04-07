@@ -4,40 +4,80 @@
   padding: 0;
   font-size: 14px; }
 
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* html .clearfix {
+  zoom: 1; }
+
+*:first-child + html .clearfix {
+  zoom: 1; }
+
 html {
-  background-image: linear-gradient(to bottom, #EA9778 0%, #FFDEC7 0%); }
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html {
+  background-image: url("../img/bg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 body .blurb {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  background-color: #fff;
-  text-align: center; }
-body .words {
-  position: relative;
-  top: 25vh;
+  text-align: center;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap; }
+body .words {
+  display: flex;
+  justify-content: center;
+  color: #E0E0E0; }
   body .words .binary {
-    background-color: red;
     margin: 20px; }
     body .words .binary span {
       font-size: 6rem;
       text-transform: uppercase;
-      font-family: "Orbitron", sans-serif; }
+      font-family: "Orbitron", sans-serif;
+      text-shadow: 2px 2px #880E4F; }
   body .words .for {
-    background-color: blue;
     margin: 20px; }
     body .words .for span {
       font-size: 6rem;
       text-transform: uppercase;
-      font-family: "Orbitron", sans-serif; }
+      font-family: "Orbitron", sans-serif;
+      text-shadow: 2px 2px #880E4F; }
   body .words .noobs {
-    background-color: green;
     margin: 20px; }
     body .words .noobs span {
       font-size: 6rem;
       text-transform: uppercase;
-      font-family: "Orbitron", sans-serif; }
+      font-family: "Orbitron", sans-serif;
+      text-shadow: 2px 2px #880E4F; }
+body .playBtn {
+  width: 100%;
+  height: 20%;
+  margin-top: 28px; }
+  body .playBtn button {
+    height: 40px;
+    background-color: #C2185B;
+    border: none;
+    border-radius: 5px; }
+    body .playBtn button a {
+      padding: 15px 25px;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-family: "Orbitron", sans-serif;
+      color: #FCE4EC; }
 
 /*# sourceMappingURL=style.css.map */
