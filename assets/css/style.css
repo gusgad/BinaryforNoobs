@@ -18,17 +18,13 @@
 *:first-child + html .clearfix {
   zoom: 1; }
 
-html {
+html, * {
   box-sizing: border-box; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
 
-html {
-  background-image: url("../img/bg1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
+/* HomeTemplate */
 body .blurb {
   width: 100%;
   height: 100vh;
@@ -38,7 +34,10 @@ body .blurb {
   justify-content: center;
   align-items: center;
   align-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  background-image: url("../img/bg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 body .words {
   display: flex;
   justify-content: center;
@@ -79,5 +78,25 @@ body .playBtn {
       text-transform: uppercase;
       font-family: "Orbitron", sans-serif;
       color: #FCE4EC; }
+
+/* PlayTemplate */
+.playground {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #f3e2c7 0%, #e9d4b3 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around; }
+  .playground .game {
+    height: 50%; }
+    .playground .game h1 {
+      height: 10%;
+      margin: 0;
+      font-family: "Arvo", serif;
+      font-size: bold; }
+  .playground bulb-directive {
+    height: 20px;
+    width: 20px; }
 
 /*# sourceMappingURL=style.css.map */

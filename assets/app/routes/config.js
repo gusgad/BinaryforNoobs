@@ -11,6 +11,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('play', {
       url: "/play",
       templateUrl: "assets/app/templates/playTemplate.html",
-      controller: 'playController'
+      controller: 'PlayController'
     })
 });
