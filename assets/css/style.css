@@ -102,6 +102,8 @@ body .playBtn {
     width: 80%;
     display: flex;
     justify-content: space-between;
-    text-align: center; }
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem; }
 
 /*# sourceMappingURL=style.css.map */
