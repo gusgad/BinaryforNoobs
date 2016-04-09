@@ -83,20 +83,25 @@ body .playBtn {
 .playground {
   width: 100%;
   height: 100vh;
+  padding: 15% 0;
   background: linear-gradient(to right, #f3e2c7 0%, #e9d4b3 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: space-around; }
-  .playground .game {
-    height: 50%; }
-    .playground .game h1 {
+  align-content: space-around;
+  flex-wrap: wrap; }
+  .playground .task {
+    width: 100%;
+    text-align: center; }
+    .playground .task h1 {
       height: 10%;
       margin: 0;
       font-family: "Arvo", serif;
       font-size: bold; }
-  .playground bulb-directive {
-    height: 20px;
-    width: 20px; }
+  .playground .bulbs {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
