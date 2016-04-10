@@ -54,38 +54,7 @@ module.exports = function(grunt) {
 			}
 		}
 	},
-
-  babel: {
-            "options": {
-                "sourceMap": true,
-                "experimental": true
-            },
-            dist: {
-                files: [{
-                    "expand": true,
-                    "cwd": "assets/app/modules",
-                    "src": ["**/*.js"],
-                    "dest": "assets/app/",
-                    "ext": ".js"
-                }]
-            }
-      },
-//watch
-      watch: {
-			sass: {
-				files: 'assets/css/*.sass',
-				tasks: ['sass']
-			},
-      jade: {
-        files: 'assets/app/templates/*.jade',
-        tasks: ['jade']
-      },
-      scripts: {
-        files: 'assets/app/modules/*.js',
-        tasks: ["babel"]
-      }
-		},
-
+      
 //jade
        jade: {
           compile: {
@@ -95,10 +64,23 @@ module.exports = function(grunt) {
               }
             },
             files: {
-              "index.html": ["assets/*.jade"]
+              "index.html": ["assets/templates/*.jade"]
             }
           }
-       },
+        },
+
+//watch
+      watch: {
+			sass: {
+				files: 'assets/css/*.sass',
+				tasks: ['sass']
+			},
+              jade: {
+                files: 'assets/templates/*.jade',
+                tasks: ['jade']
+            }
+		},
+    
 
 //server
       connect: {

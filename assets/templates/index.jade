@@ -1,0 +1,66 @@
+doctype
+html
+    head
+       meta(charset='utf-8')
+       title Binary for Noobs
+       link(rel='stylesheet', href='bower_components/animate.css/animate.min.css')
+       link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Orbitron:700,500')
+       link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Arvo:400,700')
+       link(rel='stylesheet', href='bower_components/font-awesome/css/font-awesome.min.css')
+       link(rel='stylesheet', href='assets/css/style.css')
+    body
+        #blurb
+            .contacts
+                a(href='https://github.com/husgad', target='_blank')
+                    i(class='fa fa-github fa-1x')  See on GitHub
+            .words.clearfix
+                .binary
+                    each val in ['B', 'i', 'n', 'a', 'r', 'y']
+                        span= val
+                .for
+                    each val in ['F', 'o', 'r']
+                        span= val
+                .noobs
+                    each val in ['N', 'o', 'o', 'b', 's']
+                        span= val
+            .playBtn
+                button
+                    a(href='#playground') Play
+        #playground
+            .task
+                h1 Represent
+                h1(class='goal') 100
+                h1 bites by clicking on the bulbs!
+            .bulbs
+                each val, index in {1: 'o', 2: 'two', 4: 'four', 8: 'eight', 16: 'sixteen', 32: 'fourthirtytwo', 64: 'sixtyfour', 128: 'onetwentyeight'}
+                    div(class=val)
+                        p= index
+                        i(class='fa fa-lightbulb-o fa-5x')
+            .result
+                h2 Perfect!
+            .settings
+                .reset
+                    p Reset
+                .hide
+                    p Hide decimals
+                .set
+                    p Set your goal
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+        script(src='modules/main.js')
+        script(src='modules/title.js')
+                    
+                    
