@@ -6,6 +6,7 @@ html
        link(rel='stylesheet', href='bower_components/animate.css/animate.min.css')
        link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Orbitron:700,500')
        link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Arvo:400,700')
+       link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:600', rel='stylesheet', type='text/css')
        link(rel='stylesheet', href='bower_components/font-awesome/css/font-awesome.min.css')
        link(rel='stylesheet', href='assets/css/style.css')
     body
@@ -29,22 +30,28 @@ html
         #playground
             .task
                 h1 Represent
-                h1(class='goal') 100
-                h1 bites by clicking on the bulbs!
-            .bulbs
+                h1(class='goal') 83
+                h1 by clicking on the bit-bulbs!
+            .bulb
                 each val, index in {1: 'o', 2: 'two', 4: 'four', 8: 'eight', 16: 'sixteen', 32: 'fourthirtytwo', 64: 'sixtyfour', 128: 'onetwentyeight'}
-                    div(class=val)
-                        p= index
+                    div(class=val + ' decimals')
+                        p(class='ind')= index
                         i(class='fa fa-lightbulb-o fa-5x')
             .result
                 h2 Perfect!
             .settings
+                .showHide
+                    p Hide
+                    i(class='fa fa-angle-down fa-2x')
                 .reset
-                    p Reset
-                .hide
+                    button Reset
+                .hide 
                     p Hide decimals
+                    input(type='checkbox', id='hide')
                 .set
                     p Set your goal
+                    input(type='text' placeholder='ex. 83')
+                    button Set
                     
                     
                     
@@ -60,7 +67,6 @@ html
                     
                     
                     
-        script(src='modules/main.js')
-        script(src='modules/title.js')
+        script(src='bundle.js')
                     
                     

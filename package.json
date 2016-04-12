@@ -4,7 +4,7 @@
   "description": "project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server modules/main.js"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,16 @@
     "grunt-postcss": "^0.7.1",
     "grunt-uncss": "^0.4.4",
     "load-grunt-tasks": "^3.4.1",
-    "precss": "^1.4.0"
-  }
+    "precss": "^1.4.0",
+    "webpack": "^1.12.15",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/husgad/BinaryforNoobs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/husgad/BinaryforNoobs/issues"
+  },
+  "homepage": "https://github.com/husgad/BinaryforNoobs#readme"
 }
