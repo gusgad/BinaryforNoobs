@@ -2,4 +2,6 @@
 'use strict';
 
 require('./title.es6');
-require('./settings.es6');
+var word = require('./settings.es6');
+
+console.log(word.sup);
