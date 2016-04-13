@@ -30,7 +30,7 @@ html
         #playground
             .task
                 h1 Represent
-                h1(class='goal') 83
+                h1(id='goal') 83
                 h1 by clicking on the bit-bulbs!
             .bulb
                 each val, index in {1: 'o', 2: 'two', 4: 'four', 8: 'eight', 16: 'sixteen', 32: 'fourthirtytwo', 64: 'sixtyfour', 128: 'onetwentyeight'}
@@ -50,8 +50,8 @@ html
                     input(type='checkbox', id='hide')
                 .set
                     p Set your goal
-                    input(type='text' placeholder='ex. 83')
-                    button Set
+                    input(type='text', id='goalValue', placeholder='ex. 83')
+                    button(id='goalSet') Set
                     
                     
                     

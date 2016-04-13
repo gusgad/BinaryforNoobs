@@ -123,7 +123,7 @@ body .playBtn {
       margin: 0;
       font-family: "Arvo", serif;
       font-size: bold; }
-    #playground .task .goal {
+    #playground .task #goal {
       text-decoration: underline;
       margin: 0 2%;
       color: #A5C4AB; }

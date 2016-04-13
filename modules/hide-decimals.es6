@@ -1,4 +1,3 @@
-(function() {
     /* Decimals hide */
     // DOM cache
     let hideCheckbox = document.getElementById('hide');
@@ -16,10 +15,4 @@
                  index[i].style.visibility = 'visible';
              }
         }
-    }
-    
-     module.exports = {
-        sup: 'sup'
-    }
-    
-})();
+    };
