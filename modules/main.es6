@@ -17,6 +17,7 @@ let bulbValue = document.getElementsByClassName('ind');
 
 // Clicked bulbs array
 let clickedBulbs = [];
+let clickedBulbsSum = 0;
     
 /* Event listeners */
 
@@ -44,7 +45,20 @@ function setGoal() {
 function returnBulbValue() {
     let value = this.className.split(' ').slice(0,1);
     for (i = 0; i < value.length; i++) {
-        clickedBulbs.push(value[i]);
+        clickedBulbs.push(Number(value[i]));
+        console.log(clickedBulbs);
     };
-    console.log(clickedBulbs);
+
+    clickedBulbs.reduce(function(total, num) {
+        console.log(total + num);
+    });
 };
+
+
+
+
+
+
+
+
+
