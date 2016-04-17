@@ -49,9 +49,10 @@ function returnBulbValue() {
         console.log(clickedBulbs);
     };
 
-    clickedBulbs.reduce(function(total, num) {
-        console.log(total + num);
-    });
+    let reduced = clickedBulbs.reduce(function(sum, num) {
+        return sum + num;
+    }, 0);
+    console.log(reduced);
 };
 
 
