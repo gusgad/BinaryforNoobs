@@ -2,6 +2,8 @@
 require('./title.es6');
 /* Requiring decimals hiding feature */
 require('./hide-decimals.es6');
+/* Requiring bulb color toggling module */
+require('./bulb-highlight.es6');
 
 /* DOM caching */
 let i = 0;
@@ -63,9 +65,6 @@ function doMath() {
         alert('mehr');
     };
 };
-
-
-
 
 
 
