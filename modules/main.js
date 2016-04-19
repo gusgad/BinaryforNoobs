@@ -8,63 +8,79 @@ require('./hide-decimals.es6');
 /* Requiring bulb color toggling module */
 require('./bulb-highlight.es6');
 
-/* DOM caching */
-var i = 0;
-// Setting the goal
-var goalSet = document.getElementById('goalSet');
-var goalInput = document.getElementById('goalValue');
-var goal = document.getElementById('goal');
-var goalValue = [];
-var currentGoal = 0;
-
-// Value of the clicked bulb
-var bulb = document.getElementsByClassName('decimals');
-var bulbValue = document.getElementsByClassName('ind');
-
-// Clicked bulbs array
-var clickedBulbs = [];
-var clickedSum = 0;
-
-/* Event listeners */
-
-// Listener for setting the goal
-goalSet.addEventListener('click', setGoal);
-
-// Listener for clicking on the bulbs
-for (i; i < bulb.length; i++) {
-    bulb[i].addEventListener('click', returnBulbValue);
-};
-
-/* Functions */
-
 // Setting the goal and returning the last number in the array
-function setGoal() {
-    clickedBulbs = [];
-    goal.innerHTML = goalInput.value;
-    goalValue.push(goalInput.value);
+var settingGoal = (function () {
+    var i = 0;
+    // Setting the goal
+    var goalSet = document.getElementById('goalSet');
+    var goalInput = document.getElementById('goalValue');
+    var goal = document.getElementById('goal');
+    var goalValue = [];
+    var currentGoal = 0;
 
-    currentGoal = Number(goalValue[goalValue.length - 1]);
+    // Listener for setting the goal
+    goalSet.addEventListener('click', setGoal);
 
-    console.log(currentGoal);
-};
+    function setGoal() {
+        goal.innerHTML = goalInput.value;
+        goalValue.push(goalInput.value);
 
-// Returning the clicked value of bulb
-function returnBulbValue() {
-    var value = this.className.split(' ').slice(0, 1);
-    for (i = 0; i < value.length; i++) {
-        clickedBulbs.push(Number(value[i]));
+        currentGoal = Number(goalValue[goalValue.length - 1]);
+
+        console.log(currentGoal);
     };
 
-    clickedSum = clickedBulbs.reduce(function (sum, num) {
-        return sum + num;
-    }, 0);
+    return {
+        currentGoal: currentGoal
+    };
+})();
 
-    console.log(clickedSum);
-    doMath();
-};
+// Returning the clicked value of bulb
+var clickingBulbs = (function () {
+    var i = 0;
+    // Value of the clicked bulb
+    var bulb = document.getElementsByClassName('decimals');
+    var bulbValue = document.getElementsByClassName('ind');
+
+    // Clicked bulbs array
+    var clickedBulbs = [];
+    var clickedSum = 0;
+
+    var goalSet = document.getElementById('goalSet');
+
+    goalSet.addEventListener('click', clear);
+
+    function clear() {
+        clickedBulbs = [];
+    };
+
+    // Listener for clicking on the bulbs
+    for (i; i < bulb.length; i++) {
+        bulb[i].addEventListener('click', returnBulbValue);
+    };
+
+    function returnBulbValue() {
+        var value = this.className.split(' ').slice(0, 1);
+        for (i = 0; i < value.length; i++) {
+            clickedBulbs.push(Number(value[i]));
+        };
+
+        clickedSum = clickedBulbs.reduce(function (sum, num) {
+            return sum + num;
+        }, 0);
+
+        console.log(clickedSum);
+        doMath();
+    };
+
+    return {
+        clickedSum: clickedSum,
+        clickedBulbs: clickedBulbs
+    };
+})();
 
 function doMath() {
-    if (clickedSum > currentGoal) {
+    if (clickingBulbs.clickedSum > settingGoal.currentGoal) {
         alert('mehr');
     };
 };
