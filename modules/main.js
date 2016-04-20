@@ -7,6 +7,8 @@ require('./title.es6');
 require('./hide-decimals.es6');
 /* Requiring bulb color toggling module */
 require('./bulb-highlight.es6');
+/* Requiring a module for settings panel animations */
+require('./settings-panel.es6');
 
 // Clicked bulbs array
 var clickedBulbs = [];
@@ -44,6 +46,8 @@ var settingGoal = (function () {
         goalValue.push(goalInput.value);
 
         currentGoal = Number(goalValue[goalValue.length - 1]);
+
+        console.log(currentGoal);
     };
 
     // Global properties
@@ -87,6 +91,7 @@ var clickingBulbs = (function () {
             return sum + num;
         }, 0);
 
+        console.log(clickedSum);
         // Checking the game conditions
         doMath();
     };

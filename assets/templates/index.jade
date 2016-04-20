@@ -30,7 +30,7 @@ html
         #playground
             .task
                 h1 Represent
-                h1(id='goal') a decimal
+                h1(id='goal') a number
                 h1 by clicking on the bit-bulbs!
             .bulb
                 each val, index in {1: 1, 2: 2, 4: 4, 8: 8, 16: 16, 32: 32, 64: 64, 128: 128}
@@ -39,12 +39,11 @@ html
                         i(class='fa fa-lightbulb-o fa-5x')
             #result
                 h2 Perfect!
-            .settings
+            #settings
                 .showHide
-                    p Hide
-                    i(class='fa fa-angle-down fa-2x')
+                    i(class='fa fa-bars fa-2x', id='hamburger')
                 .reset
-                    button(id='reset') Reset
+                    button(id='reset', onclick='location.reload()') Reset
                 .hide 
                     p Hide decimals
                     input(type='checkbox', id='hide')
