@@ -24,8 +24,11 @@ html, *
   box-sizing: border-box
 *, *:before, *:after
   box-sizing: inherit
+
     
-    
+/* Colors */
+$task: #A5C4AB
+$active: #829B87
 
 
 /* HomeTemplate*/
@@ -121,7 +124,7 @@ body
   flex-wrap: wrap
   position: relative
   .task
-    width: 90%
+    width: 98%
     padding-bottom: 6%
     font-size: 1.5rem
     text-align: center
@@ -136,7 +139,7 @@ body
     #goal
       text-decoration: underline
       margin: 0 2%
-      color: #A5C4AB
+      color: $task
   .bulb
     width: 80%
     display: flex
@@ -149,7 +152,9 @@ body
       width: 80px
       height: 90px
       cursor: pointer
-  .result
+      i:hover
+        color: $task
+  #result
     width: 100%
     text-align: center
     padding-top: 3%

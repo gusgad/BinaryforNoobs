@@ -24,6 +24,7 @@ html, * {
 *, *:before, *:after {
   box-sizing: inherit; }
 
+/* Colors */
 /* HomeTemplate */
 body #blurb {
   width: 100%;
@@ -111,7 +112,7 @@ body .playBtn {
   flex-wrap: wrap;
   position: relative; }
   #playground .task {
-    width: 90%;
+    width: 98%;
     padding-bottom: 6%;
     font-size: 1.5rem;
     text-align: center;
@@ -139,12 +140,14 @@ body .playBtn {
       width: 80px;
       height: 90px;
       cursor: pointer; }
-  #playground .result {
+      #playground .bulb div i:hover {
+        color: #A5C4AB; }
+  #playground #result {
     width: 100%;
     text-align: center;
     padding-top: 3%;
     visibility: hidden; }
-    #playground .result h2 {
+    #playground #result h2 {
       font-size: 1.5rem;
       color: green; }
   #playground .settings {
