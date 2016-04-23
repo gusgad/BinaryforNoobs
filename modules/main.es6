@@ -47,8 +47,6 @@ let settingGoal = (function () {
         goalValue.push(goalInput.value);
 
         currentGoal = Number(goalValue[goalValue.length - 1]);
-        
-        console.log(currentGoal);
     };
     
     // Global properties
@@ -95,10 +93,10 @@ let clickingBulbs = (function () {
             return sum + num;
         }, 0);
         
-        console.log(clickedSum);
         // Checking the game conditions
         doMath();
     };
+    
 })();
 
 // Checking the game conditions
@@ -115,13 +113,3 @@ function doMath() {
         result.style.visibility = 'hidden';
     };
 };
-
-
-
-
-
-
-
-
-
-

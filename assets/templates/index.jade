@@ -8,12 +8,13 @@ html
        link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Arvo:400,700')
        link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:600', rel='stylesheet', type='text/css')
        link(rel='stylesheet', href='bower_components/font-awesome/css/font-awesome.min.css')
+       link(rel='stylesheet', href='bower_components/normalize-css/normalize.css')
        link(rel='stylesheet', href='assets/css/style.css')
     body
         #blurb
             .contacts
                 a(href='https://github.com/husgad', target='_blank')
-                    i(class='fa fa-github fa-1x')  See on GitHub
+                    i(class='fa fa-github fa-2x')
             .words.clearfix
                 .binary
                     each val in ['B', 'i', 'n', 'a', 'r', 'y']
@@ -32,6 +33,7 @@ html
                 h1 Represent
                 h1(id='goal') a number
                 h1 by clicking on the bit-bulbs!
+            // Iterating indexes and bulb icons with respective classes
             .bulb
                 each val, index in {1: 1, 2: 2, 4: 4, 8: 8, 16: 16, 32: 32, 64: 64, 128: 128}
                     div(class=val + ' decimals')
@@ -48,24 +50,6 @@ html
                     p Hide decimals
                     input(type='checkbox', id='hide')
                 .set
-                    p Set your goal
                     input(type='text', id='goalValue', placeholder='ex. 83')
-                    button(id='goalSet') Set
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-        script(src='modules/bundle.js')
-                    
-                    
+                    button(id='goalSet') Set your goal       
+        script(src='bundle.js')          

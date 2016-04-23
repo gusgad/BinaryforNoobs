@@ -16,8 +16,8 @@ for (i = 0; i < bulb.length; i++) {
 /* Functions */
 function toggleColors(e) {
     var target = e.target;
-    if (target.style.color != 'forestgreen') {
-        target.style.color = 'forestgreen';
+    if (target.style.color != 'mediumseagreen') {
+        target.style.color = 'mediumseagreen';
     } else {
         target.style.color = 'black';
     };

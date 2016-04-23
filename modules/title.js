@@ -11,16 +11,16 @@ var span = document.getElementsByTagName('span');
 // Listening for hovers
 for (var i = 0; i < span.length; i++) {
     span[i].addEventListener('mouseover', letterToggle);
-}
+};
 
 /* Functions */
 // Toggling
 function letterToggle(event) {
     var target = event.target;
     target.innerHTML = numberGenerator();
-}
+};
 
 //Generating random binary numbers
 function numberGenerator() {
     return Math.round(Math.random());
-}
+};

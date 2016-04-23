@@ -8,11 +8,12 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arvo:400,700">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
     <div id="blurb">
-      <div class="contacts"><a href="https://github.com/husgad" target="_blank"><i class="fa fa-github fa-1x"> See on GitHub</i></a></div>
+      <div class="contacts"><a href="https://github.com/husgad" target="_blank"><i class="fa fa-github fa-2x"></i></a></div>
       <div class="words clearfix">
         <div class="binary"><span>B</span><span>i</span><span>n</span><span>a</span><span>r</span><span>y</span>
         </div>
@@ -31,6 +32,7 @@
         <h1 id="goal">a number</h1>
         <h1>by clicking on the bit-bulbs!</h1>
       </div>
+      <!-- Iterating indexes and bulb icons with respective classes-->
       <div class="bulb">
         <div class="1 decimals">
           <p class="ind">1</p><i class="fa fa-lightbulb-o fa-5x"></i>
@@ -70,12 +72,11 @@
           <input type="checkbox" id="hide">
         </div>
         <div class="set">
-          <p>Set your goal</p>
           <input type="text" id="goalValue" placeholder="ex. 83">
-          <button id="goalSet">Set</button>
+          <button id="goalSet">Set your goal       </button>
         </div>
       </div>
     </div>
-    <script src="bundle.js"></script>
+    <script src="bundle.js">         </script>
   </body>
 </html>

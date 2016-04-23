@@ -20,4 +20,3 @@ function animate() {
         settingsPanel.style.height = '15%';
     }
 };
-

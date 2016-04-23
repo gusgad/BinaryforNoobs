@@ -25,8 +25,16 @@ html, * {
   box-sizing: inherit; }
 
 /* Colors */
+/* Classes to toggle */
 .ninety {
   transform: rotate(90deg); }
+
+/* Extends */
+.letter, body .words .binary span, body .words .for span, body .words .noobs span {
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 2px 2px #C6C6C6; }
 
 /* HomeTemplate */
 body #blurb {
@@ -39,75 +47,63 @@ body #blurb {
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
-  background-image: url("../img/bg4.jpg");
+  background-image: url("../img/bg5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
 body .contacts {
   top: 0;
   left: 0;
-  position: absolute;
   height: 50px;
   width: 100%;
+  position: absolute;
   margin: 0 auto;
   display: flex;
   justify-content: flex-end;
   align-items: center; }
   body .contacts a {
     color: white;
-    margin-right: 3%;
-    font-size: 1.2rem;
-    font-family: "Arvo", serif; }
+    margin-right: 3%; }
 body .words {
+  width: auto;
+  height: auto;
   display: flex;
   justify-content: center;
   color: #E0E0E0; }
   body .words .binary {
     margin: 20px; }
-    body .words .binary span {
-      font-size: 6rem;
-      text-transform: uppercase;
-      font-family: "Orbitron", sans-serif;
-      text-shadow: 2px 2px #880E4F; }
   body .words .for {
     margin: 20px; }
-    body .words .for span {
-      font-size: 6rem;
-      text-transform: uppercase;
-      font-family: "Orbitron", sans-serif;
-      text-shadow: 2px 2px #880E4F; }
   body .words .noobs {
     margin: 20px; }
-    body .words .noobs span {
-      font-size: 6rem;
-      text-transform: uppercase;
-      font-family: "Orbitron", sans-serif;
-      text-shadow: 2px 2px #880E4F; }
 body .playBtn {
   width: 100%;
-  height: 20%;
+  height: auto;
   margin-top: 28px; }
   body .playBtn button {
     width: 180px;
     height: 50px;
-    background-color: transparent;
-    border: 1px solid #B2B2B2;
-    border-radius: 5px; }
+    background-color: #E0E0E0;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s all;
+    box-shadow: 1px 1px 1px #C6C6C6; }
     body .playBtn button:hover {
-      background: rgba(219, 219, 219, 0.1); }
+      background-color: #F4F4F4;
+      box-shadow: 2px 2px 3px #C6C6C6; }
     body .playBtn button a {
-      padding: 15px 25px;
+      padding: 12px 57px;
       font-size: 1.5rem;
       text-transform: uppercase;
       font-family: "Orbitron", sans-serif;
-      color: #FCE4EC; }
+      color: #76C284; }
 
 /* PlayTemplate */
 #playground {
   width: 100%;
   height: 100vh;
   padding: 15% 0;
-  background-image: linear-gradient(to bottom, #E3E0DC 0%, #CCC1AF 100%);
+  background-color: #FFE1D6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,21 +148,23 @@ body .playBtn {
     padding-top: 3%;
     visibility: hidden; }
     #playground #result h2 {
-      font-size: 1.5rem;
-      color: green; }
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #A5C4AB; }
   #playground #settings {
+    left: 0;
+    bottom: 0;
+    position: absolute;
     width: 100%;
     height: 15%;
     background-image: linear-gradient(to bottom, #E3E3E3 0%, #B5B3B5 100%);
     box-shadow: 3px 2px 1px 2px #363636;
-    position: absolute;
-    left: 0;
-    bottom: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    transition: 1s all; }
+    transition: 0.7s all; }
     #playground #settings .showHide {
       width: 100%;
       display: flex;
@@ -181,36 +179,50 @@ body .playBtn {
         #playground #settings .showHide i:hover {
           color: #9A9A9A; }
     #playground #settings .reset button {
-      width: 60px;
-      height: 30px;
-      border-radius: 5px;
-      background-color: #D0B2B2;
-      border: 1px solid #898989; }
+      width: 80px;
+      height: 40px;
+      border-radius: 3px;
+      background-color: #ee6e73;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: none;
+      box-shadow: 1px 1px 1px #AFAFAF;
+      transition: 0.5s all; }
+      #playground #settings .reset button:hover {
+        background-color: #EF898C;
+        box-shadow: 3px 3px 3px #AFAFAF; }
     #playground #settings .hide {
       display: flex;
       align-items: center; }
       #playground #settings .hide p {
-        margin-right: 15px; }
+        margin-right: 15px;
+        font-size: 1.2rem; }
     #playground #settings .set {
       display: flex;
       align-items: center; }
-      #playground #settings .set p {
-        margin-right: 15px; }
       #playground #settings .set input {
         width: 50px;
-        height: 30px;
+        height: 40px;
         margin-right: 15px; }
       #playground #settings .set button {
-        width: 60px;
-        height: 30px;
+        width: 160px;
+        height: 40px;
         margin-right: 15px;
-        border-radius: 5px;
-        background-color: #A5C4AB;
-        border: 1px solid #898989; }
+        border-radius: 3px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: bold;
+        background-color: #26a69a;
+        box-shadow: 1px 1px 1px #AFAFAF;
+        border: none;
+        transition: 0.5s all; }
+        #playground #settings .set button:hover {
+          background-color: #2BC0B1;
+          box-shadow: 3px 3px 3px #AFAFAF; }
     #playground #settings p {
-      color: #191919;
+      color: #323232;
       font-family: "Source Sans Pro", sans-serif;
-      font-size: 1.2rem;
-      font-weight: 600; }
+      font-size: 1.2rem; }
 
 /*# sourceMappingURL=style.css.map */
