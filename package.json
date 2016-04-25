@@ -4,7 +4,8 @@
   "description": "project",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server modules/main.js"
+    "start": "webpack-dev-server modules/main.js",
+    "ci": "node js/test/spec/main_spec.js"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-postcss": "^0.7.1",
     "grunt-uncss": "^0.4.4",
+    "jshint": "^2.9.2",
     "load-grunt-tasks": "^3.4.1",
     "precss": "^1.4.0",
     "webpack": "^1.12.15",
