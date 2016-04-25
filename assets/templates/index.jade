@@ -4,8 +4,9 @@ html
        meta(charset='utf-8')
        title Binary for Noobs
        link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Orbitron:700,500')
-       link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Arvo:400,700')
+       link(href='https://fonts.googleapis.com/css?family=Raleway:400,700', rel='stylesheet')
        link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:600', rel='stylesheet', type='text/css')
+       link(href='https://fonts.googleapis.com/css?family=Montserrat:700', rel='stylesheet')
        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css')
        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css')
        link(rel='stylesheet', href='assets/css/style.css')
@@ -46,8 +47,8 @@ html
                 .reset
                     button(id='reset', onclick='location.reload()') Reset
                 .hide 
-                    p Hide decimals
-                    input(type='checkbox', id='hide')
+                    label Hide decimals
+                        input(type='checkbox', value='none', id='hide')
                 .set
                     input(type='text', id='goalValue', placeholder='ex. 83')
                     button(id='goalSet') Set your goal       

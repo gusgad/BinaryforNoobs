@@ -18,14 +18,14 @@ let goalValue = [];
 let currentGoal = 0;
 
 /* Goal setting module */
-let settingGoal = (function () {
+let settingGoal = (() => {
     
     /* DOM cache */
     
     let i = 0;
-    let goalSet = document.getElementById('goalSet');
-    let goalInput = document.getElementById('goalValue');
-    let goal = document.getElementById('goal');
+    const goalSet = document.getElementById('goalSet');
+    const goalInput = document.getElementById('goalValue');
+    const goal = document.getElementById('goal');
     
     
     /* Event listeners */
@@ -37,7 +37,7 @@ let settingGoal = (function () {
     /* Functions */
     
     // Changing the inner HTML and pushing the value to an array
-    function setGoal() {
+    function setGoal(){
         
         // Resetting the clicked values on a new goal
         clickedBulbs = [];
@@ -57,13 +57,13 @@ let settingGoal = (function () {
 })();
     
 //* Bulb clicking module */
-let clickingBulbs = (function () {
+let clickingBulbs = (() => {
     
     /* DOM cache */
     
     let i = 0;
-    let bulb = document.getElementsByClassName('decimals');
-    let bulbValue = document.getElementsByClassName('ind');
+    const bulb = document.getElementsByClassName('decimals');
+    const bulbValue = document.getElementsByClassName('ind');
     
     
     /* Event listeners */

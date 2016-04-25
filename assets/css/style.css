@@ -121,7 +121,7 @@ body .playBtn {
     #playground .task h1 {
       height: 10%;
       margin: 0;
-      font-family: "Arvo", serif;
+      font-family: "Montserrat", sans-serif;
       font-size: bold; }
     #playground .task #goal {
       text-decoration: underline;
@@ -157,7 +157,7 @@ body .playBtn {
     bottom: 0;
     position: absolute;
     width: 100%;
-    height: 15%;
+    height: 100px;
     background-image: linear-gradient(to bottom, #E3E3E3 0%, #B5B3B5 100%);
     box-shadow: 3px 2px 1px 2px #363636;
     display: flex;
@@ -167,6 +167,7 @@ body .playBtn {
     transition: 0.7s all; }
     #playground #settings .showHide {
       width: 100%;
+      height: 30px;
       display: flex;
       justify-content: center;
       align-items: center; }
@@ -195,9 +196,15 @@ body .playBtn {
     #playground #settings .hide {
       display: flex;
       align-items: center; }
-      #playground #settings .hide p {
-        margin-right: 15px;
+      #playground #settings .hide label {
+        font-family: "Raleway", sans-serif;
         font-size: 1.2rem; }
+        #playground #settings .hide label #hide {
+          margin-left: 5px;
+          vertical-align: middle;
+          box-shadow: 3px 1px 1px 1px grey; }
+          #playground #settings .hide label #hide:checked {
+            box-shadow: 2px 1px 1px 1px grey; }
     #playground #settings .set {
       display: flex;
       align-items: center; }
@@ -222,7 +229,7 @@ body .playBtn {
           box-shadow: 3px 3px 3px #AFAFAF; }
     #playground #settings p {
       color: #323232;
-      font-family: "Source Sans Pro", sans-serif;
+      font-family: "Raleway", sans-serif;
       font-size: 1.2rem; }
 
 /*# sourceMappingURL=style.css.map */

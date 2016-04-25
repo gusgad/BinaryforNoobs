@@ -15,10 +15,9 @@ hamburger.addEventListener('click', animate);
 
 function animate() {
     hamburger.classList.toggle('ninety');
-    if (settingsPanel.style.height != '5%') {
-        settingsPanel.style.height = '5%';
-        hamburger.style.paddingTop = '5px';
+    if (settingsPanel.style.height != '30px') {
+        settingsPanel.style.height = '30px';
     } else {
-        settingsPanel.style.height = '15%';
+        settingsPanel.style.height = '100px';
     }
 };

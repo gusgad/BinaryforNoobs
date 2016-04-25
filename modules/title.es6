@@ -2,7 +2,7 @@
 
 /* DOM caching */
 // Caching spans
-let span = document.getElementsByTagName('span');
+const span = document.getElementsByTagName('span');
 
 /* Event listeners */
 // Listening for hovers

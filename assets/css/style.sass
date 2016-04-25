@@ -149,7 +149,7 @@ body
     h1
       height: 10%
       margin: 0
-      font-family: 'Arvo', serif
+      font-family: 'Montserrat', sans-serif
       font-size: bold
     #goal
       text-decoration: underline
@@ -185,7 +185,7 @@ body
     bottom: 0
     position: absolute
     width: 100%
-    height: 15%
+    height: 100px
     background-image: linear-gradient(to bottom, #E3E3E3 0%, #B5B3B5 100%)
     box-shadow: 3px 2px 1px 2px #363636
     display: flex
@@ -195,6 +195,7 @@ body
     transition: 0.7s all
     .showHide
       width: 100%
+      height: 30px
       display: flex
       justify-content: center
       align-items: center
@@ -225,9 +226,15 @@ body
     .hide
       display: flex
       align-items: center
-      p
-        margin-right: 15px
+      label
+        font-family: 'Raleway', sans-serif
         font-size: 1.2rem
+        #hide
+          margin-left: 5px
+          vertical-align: middle
+          box-shadow: 3px 1px 1px 1px grey
+          &:checked
+            box-shadow: 2px 1px 1px 1px grey
     .set
       display: flex
       align-items: center
@@ -252,5 +259,5 @@ body
           box-shadow: 3px 3px 3px $playbuttonshadow
     p
       color: #323232
-      font-family: 'Source Sans Pro', sans-serif
+      font-family: 'Raleway', sans-serif
       font-size: 1.2rem

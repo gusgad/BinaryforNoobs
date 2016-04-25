@@ -2,8 +2,8 @@
 
 // DOM cache
 let i = 0;
-let hideCheckbox = document.getElementById('hide');
-let index = document.getElementsByClassName('ind');
+const hideCheckbox = document.getElementById('hide');
+const index = document.getElementsByClassName('ind');
     
 //Event listeners
 hideCheckbox.addEventListener('change', hideDecimals);
