@@ -27,7 +27,8 @@ html, * {
 /* Colors */
 /* Classes to toggle */
 .ninety {
-  transform: rotate(90deg); }
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg); }
 
 /* Extends */
 .letter, body .words .binary span, body .words .for span, body .words .noobs span {
@@ -42,11 +43,24 @@ body #blurb {
   height: 100vh;
   margin: 0 auto;
   text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   background-image: url("../img/bg5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -58,17 +72,32 @@ body .contacts {
   width: 100%;
   position: absolute;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center; }
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
   body .contacts a {
     color: white;
     margin-right: 3%; }
 body .words {
   width: auto;
   height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #E0E0E0; }
   body .words .binary {
     margin: 20px; }
@@ -86,6 +115,7 @@ body .playBtn {
     background-color: #E0E0E0;
     border: none;
     border-radius: 5px;
+    -webkit-transition: 0.5s all;
     transition: 0.5s all;
     box-shadow: 1px 1px 1px #C6C6C6; }
     body .playBtn button:hover {
@@ -104,20 +134,41 @@ body .playBtn {
   height: 100vh;
   padding: 15% 0;
   background-color: #FFE1D6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: space-around;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-content: space-around;
+      -ms-flex-line-pack: distribute;
+          align-content: space-around;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   position: relative; }
   #playground .task {
     width: 98%;
     padding-bottom: 6%;
     font-size: 1.5rem;
     text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-wrap: no-wrap; }
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-wrap: no-wrap;
+        -ms-flex-wrap: no-wrap;
+            flex-wrap: no-wrap; }
     #playground .task h1 {
       height: 10%;
       margin: 0;
@@ -129,9 +180,19 @@ body .playBtn {
       color: #A5C4AB; }
   #playground .bulb {
     width: 80%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     text-align: center;
     font-family: "Orbitron", sans-serif;
     font-size: 3rem; }
@@ -141,6 +202,7 @@ body .playBtn {
       cursor: pointer; }
       #playground .bulb div i:hover {
         color: #A5C4AB;
+        -webkit-transition: 0.2s all;
         transition: 0.2s all; }
   #playground #result {
     width: 100%;
@@ -158,24 +220,46 @@ body .playBtn {
     position: absolute;
     width: 100%;
     height: 100px;
+    background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #B5B3B5 100%);
     background-image: linear-gradient(to bottom, #E3E3E3 0%, #B5B3B5 100%);
     box-shadow: 3px 2px 1px 2px #363636;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-transition: 0.7s all;
     transition: 0.7s all; }
     #playground #settings .showHide {
       width: 100%;
       height: 30px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
-      align-items: center; }
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
       #playground #settings .showHide p {
         margin-right: 15px; }
       #playground #settings .showHide i {
         color: #505050;
         cursor: pointer;
+        -webkit-transition: 0.5s all;
         transition: 0.5s all; }
         #playground #settings .showHide i:hover {
           color: #9A9A9A; }
@@ -189,13 +273,20 @@ body .playBtn {
       font-weight: bold;
       border: none;
       box-shadow: 1px 1px 1px #AFAFAF;
+      -webkit-transition: 0.5s all;
       transition: 0.5s all; }
       #playground #settings .reset button:hover {
         background-color: #EF898C;
         box-shadow: 3px 3px 3px #AFAFAF; }
     #playground #settings .hide {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center; }
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
       #playground #settings .hide label {
         font-family: "Raleway", sans-serif;
         font-size: 1.2rem; }
@@ -206,8 +297,14 @@ body .playBtn {
           #playground #settings .hide label #hide:checked {
             box-shadow: 2px 1px 1px 1px grey; }
     #playground #settings .set {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center; }
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
       #playground #settings .set input {
         width: 50px;
         height: 40px;
@@ -223,6 +320,7 @@ body .playBtn {
         background-color: #26a69a;
         box-shadow: 1px 1px 1px #AFAFAF;
         border: none;
+        -webkit-transition: 0.5s all;
         transition: 0.5s all; }
         #playground #settings .set button:hover {
           background-color: #2BC0B1;
@@ -231,5 +329,3 @@ body .playBtn {
       color: #323232;
       font-family: "Raleway", sans-serif;
       font-size: 1.2rem; }
-
-/*# sourceMappingURL=style.css.map */
