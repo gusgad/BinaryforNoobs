@@ -5,4 +5,4 @@
 This is my personal project based on vanilla JavaScript(ES6). Any kind of shoutout or share would be appreciated! :)
 
 #Play!
-http://husgad.github.io/BinaryforNoobs
+http://gusgad.github.io/BinaryforNoobs
